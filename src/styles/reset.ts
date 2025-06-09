@@ -40,7 +40,8 @@ export const GlobalReset = createGlobalStyle`
     }
 
     body{
-        height: 100vw;
+        position: relative;
+        min-height: 100vh;
         font-family: "Inter", sans-serif;
         /* background: #000;
         background: -webkit-linear-gradient(
