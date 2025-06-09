@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
+import img from '../assets/coracao.jpg'
+
 export const GlobalReset = createGlobalStyle`
     /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -38,13 +40,20 @@ export const GlobalReset = createGlobalStyle`
     }
 
     body{
+        height: 100vw;
         font-family: "Inter", sans-serif;
-        background: #000;
+        /* background: #000;
         background: -webkit-linear-gradient(
             to right,
             #000,#CC0000
         );
-        background: linear-gradient(to right, #000, #CC0000);
+        background: linear-gradient(to right, #000, #CC0000); */
+
+        background-image: linear-gradient(
+      #0009,
+      #0002
+    ),
+    url(${img});
     }
 
 

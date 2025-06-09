@@ -42,7 +42,7 @@ const images = [
   {
     title: 'Atualmente',
     img: img_five,
-    text: 'E hoje em dia, depois de tudo isso, estamos mais próximos, nos encontramos com mais frequência e não tenho dúvidas em relação a que eu estou completamente apaixonado por você!',
+    text: 'E hoje em dia, depois de tudo isso, estamos mais próximos, nos encontramos com mais frequência e não tenho dúvidas em relação a que eu estou completamente apaixonado por você! Espero de verdade que no próximo dia dos namorados, seremos um casal de verdade!',
   },
 ]
 
