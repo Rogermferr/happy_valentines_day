@@ -1,10 +1,4 @@
-import {
-  A11y,
-  EffectCoverflow,
-  Navigation,
-  Pagination,
-  Scrollbar,
-} from 'swiper/modules'
+import { A11y, EffectCoverflow, Pagination } from 'swiper/modules'
 import {
   CardStyle,
   PageStyle,
@@ -21,9 +15,8 @@ import img_four from './assets/tais4085-20250609-0002.jpg'
 import img_five from './assets/tais4085-20250609-0001.jpg'
 
 import 'swiper/css'
-import 'swiper/css/navigation'
+
 import 'swiper/css/pagination'
-import 'swiper/css/scrollbar'
 
 const images = [
   {
@@ -44,12 +37,12 @@ const images = [
   {
     title: 'Primeiro encontro',
     img: img_four,
-    text: 'Com o tempo acostumamos um com o outro e conversavamos diariamente, demorou um pouco para nos conhecermos pessoalmente, até que um domingo eu fui até a frente da sua casa e comprovei a mulher maravilhosa que eu imaginei que você é.',
+    text: 'Com o tempo acostumamos um com o outro e começamos a nos falar diariamente, demorou um pouco para nos conhecermos pessoalmente, até que em um domingo eu fui até a frente da sua casa e comprovei a mulher maravilhosa que eu imaginei que você é.',
   },
   {
-    title: 'teste',
+    title: 'Atualmente',
     img: img_five,
-    text: 'Texto para teste onde será substituidos por frases determinadas',
+    text: 'E hoje em dia, depois de tudo isso, estamos mais próximos, nos encontramos com mais frequência e não tenho dúvidas em relação a que eu estou completamente apaixonado por você!',
   },
 ]
 
@@ -58,15 +51,19 @@ function App() {
     <>
       <GlobalReset />
       <PageStyle>
-        <h1>Feliz dia dos Namorados</h1>
+        <h1>Feliz dia dos Namorados Nega!</h1>
+
+        <h2>
+          Sei que ainda não somos namorados, mas fiz esse pequeno projeto para
+          demonstrar o quanto sou feliz por ter te conhecido
+        </h2>
         <PhotosListStyle>
           <Swiper
-            modules={[A11y, EffectCoverflow, Navigation, Pagination, Scrollbar]}
+            modules={[A11y, EffectCoverflow, Pagination]}
             loop={true}
             spaceBetween={10}
             slidesPerView={1}
             pagination={{ clickable: true }}
-            navigation={{ enabled: true, hideOnClick: true }}
             effect='coverflow'
           >
             <ul>

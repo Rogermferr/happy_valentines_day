@@ -10,20 +10,20 @@ export const PageStyle = styled.div`
   h1 {
     font-size: 3rem;
     color: #fff;
+    font-weight: bold;
   }
 
   h2 {
     color: var(--color-white);
     font-size: 2rem;
     font-weight: bold;
+    color: #fff;
   }
 `
 
 export const PhotosListStyle = styled.li`
   width: 600px;
   aspect-ratio: 1/1;
-
-  margin-bottom: 150px;
 
   h2 {
     color: #fff;
@@ -81,7 +81,6 @@ export const CardStyle = styled.li`
 
     h2,
     p {
-      text-align: justify;
       color: #fff;
       padding: 0 5px;
     }

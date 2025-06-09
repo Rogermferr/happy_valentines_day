@@ -84,5 +84,9 @@ export const GlobalReset = createGlobalStyle`
         margin: 0 auto;
     }
 
-    
+     :root{
+
+        --swiper-pagination-color: #fff;
+        --swiper-pagination-progressbar-bg-color: #fff;
+    }
 `
