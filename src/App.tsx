@@ -21,9 +21,9 @@ import img_four from './assets/tais4085-20250609-0002.jpg'
 import img_five from './assets/tais4085-20250609-0001.jpg'
 
 import 'swiper/css'
-// import 'swiper/css/navigation'
+import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-// import 'swiper/css/scrollbar'
+import 'swiper/css/scrollbar'
 
 const images = [
   {
@@ -61,7 +61,7 @@ function App() {
         <h1>Feliz dia dos Namorados</h1>
         <PhotosListStyle>
           <Swiper
-            modules={[Pagination]}
+            modules={[A11y, EffectCoverflow, Navigation, Pagination, Scrollbar]}
             loop={true}
             spaceBetween={10}
             slidesPerView={1}
