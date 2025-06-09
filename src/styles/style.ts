@@ -6,17 +6,21 @@ export const PageStyle = styled.div`
   align-items: center;
   scroll-margin-top: 80px;
   text-align: center;
+  gap: 8px;
 
   h1 {
     font-size: 3rem;
-    color: #fff;
+    color: #c00000;
     font-weight: bold;
+
+    font-size: 3rem;
+    text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+      2px 2px 0 black;
   }
 
   h2 {
     color: var(--color-white);
     font-size: 2rem;
-    font-weight: bold;
     color: #fff;
   }
 `
@@ -69,7 +73,7 @@ export const CardStyle = styled.li`
 
     background-color: #0009;
     transform: translateY(100%);
-    transition: all 0.5s ease;
+    transition: all 1s ease;
 
     position: absolute;
     top: 0;
@@ -79,10 +83,16 @@ export const CardStyle = styled.li`
     height: 100%;
     border-radius: 20px;
 
-    h2,
+    h2 {
+      color: #c00000;
+      font-size: 2rem;
+      text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+        2px 2px 0 black;
+    }
+
     p {
       color: #fff;
-      padding: 0 5px;
+      font-size: 1.5rem;
     }
   }
 

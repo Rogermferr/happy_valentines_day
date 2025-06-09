@@ -1,7 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
 
-import img from '../assets/coracao.jpg'
-
 export const GlobalReset = createGlobalStyle`
     /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -52,9 +50,9 @@ export const GlobalReset = createGlobalStyle`
 
         background-image: linear-gradient(
       #0009,
-      #0002
+      #0000
     ),
-    url(${img});
+    url('https://usagif.com/wp-content/uploads/gif-heart-3.gif');
     }
 
 

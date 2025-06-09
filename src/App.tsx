@@ -7,6 +7,7 @@ import {
 } from './styles/style'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { GlobalReset } from './styles/reset'
+import { motion } from 'framer-motion'
 
 import img_one from './assets/FB_IMG_1749492770871.jpg'
 import img_two from './assets/FB_IMG_1749492795287.jpg'
@@ -15,7 +16,6 @@ import img_four from './assets/tais4085-20250609-0002.jpg'
 import img_five from './assets/tais4085-20250609-0001.jpg'
 
 import 'swiper/css'
-
 import 'swiper/css/pagination'
 
 const images = [
@@ -51,37 +51,53 @@ function App() {
     <>
       <GlobalReset />
       <PageStyle>
-        <h1>Feliz dia dos Namorados Nega!</h1>
+        <motion.h1
+          initial={{ opacity: 0, y: -300 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 2 }}
+        >
+          Feliz dia dos Namorados Nega!
+        </motion.h1>
 
-        <h2>
+        <motion.h2
+          initial={{ opacity: 0, x: -500 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 3 }}
+        >
           Sei que ainda não somos namorados, mas fiz esse pequeno projeto para
-          demonstrar o quanto sou feliz por ter te conhecido
-        </h2>
+          demonstrar o quanto sou feliz por ter te conhecido!
+        </motion.h2>
         <PhotosListStyle>
-          <Swiper
-            modules={[A11y, EffectCoverflow, Pagination]}
-            loop={true}
-            spaceBetween={10}
-            slidesPerView={1}
-            pagination={{ clickable: true }}
-            effect='coverflow'
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 3 }}
           >
-            <ul>
-              {images.map((obj, index) => (
-                <SwiperSlide key={index}>
-                  <CardStyle>
-                    <img src={obj.img} alt='teste' />
+            <Swiper
+              modules={[A11y, EffectCoverflow, Pagination]}
+              loop={true}
+              spaceBetween={10}
+              slidesPerView={1}
+              pagination={{ clickable: true }}
+              effect='coverflow'
+            >
+              <ul>
+                {images.map((obj, index) => (
+                  <SwiperSlide key={index}>
+                    <CardStyle>
+                      <img src={obj.img} alt='teste' />
 
-                    <div>
-                      <h2>{obj.title}</h2>
-                      <p>{obj.text}</p>
-                    </div>
-                  </CardStyle>
-                </SwiperSlide>
-              ))}
-            </ul>
-            <SwiperPagination />
-          </Swiper>
+                      <div>
+                        <h2>{obj.title}</h2>
+                        <p>{obj.text}</p>
+                      </div>
+                    </CardStyle>
+                  </SwiperSlide>
+                ))}
+              </ul>
+              <SwiperPagination />
+            </Swiper>
+          </motion.div>
         </PhotosListStyle>
       </PageStyle>
     </>
